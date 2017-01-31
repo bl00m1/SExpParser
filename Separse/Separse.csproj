@@ -44,6 +44,15 @@
     <Compile Include="ISexpression.cs" />
     <Compile Include="Separser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SExprEnumerable.cs" />
+    <Compile Include="SExprFloat.cs" />
+    <Compile Include="SExprInteger.cs" />
+    <Compile Include="SExprKeyword.cs" />
+    <Compile Include="SExprList.cs" />
+    <Compile Include="SExprString.cs" />
+    <Compile Include="SExprSymbol.cs" />
+    <Compile Include="SExprVector.cs" />
+    <Compile Include="Types.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

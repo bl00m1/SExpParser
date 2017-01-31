@@ -6,5 +6,9 @@ namespace Separse
     {
         public static bool IsAtEnd(this Stream stream)
             => stream.Length == stream.Position;
+
+
+        
     }
+
 }

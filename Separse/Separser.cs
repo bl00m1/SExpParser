@@ -7,19 +7,14 @@ namespace Separse
 {
     public static class Separser
     {
-        public static ISExpression[] Parse(Stream input)
-        {
-            var tokens = SplitByTokens(input, '(', ')');
-            tokens.Select(Parse);
-            return null;
-        }
+        
+        public static SExprList[] Parse(Stream input)
+        =>SplitByTokens(input, '(', ')').Select(s=>new SExprList(s)).ToArray();
+        
+        
 
-        public static ISExpression[] Parse(string s)
-        {
-            return null;
-        }
 
-        public static List<string> SplitByTokens(this Stream stream, char beginToken, char endToken)
+        private static List<string> SplitByTokens(this Stream stream, char beginToken, char endToken)
         {
             var bstream = new BinaryReader(stream, Encoding.UTF8);
             var depth = 0;
