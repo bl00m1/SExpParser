@@ -33,9 +33,7 @@ namespace Separse
             if (s.First() == '(' && s.Last() == ')')
                 return new SExprList(s);
 
-
-            bool f = s.First() == '[';
-            bool l = s.Last() == ']';
+            
             if (s.First() == '[' && s.Last() == ']')
                 return new SExprVector(s);
 
